@@ -5,6 +5,8 @@ import { productService } from '../../services/productService';
 import ProductCard from '../../components/common/ProductCard';
 import { ProductGridSkeleton } from '../../components/common/Skeletons';
 import { Seo } from '../../components/common/Misc';
+import VideoSection from '../../components/common/VideoSection';
+import Gallery from '../../components/common/Gallery';
 
 const features = [
   { icon: Leaf, title: 'Kaya Zat Besi', desc: 'Daun kelor mengandung zat besi tinggi untuk mendukung kesehatan darah.' },
@@ -109,6 +111,9 @@ const Home = () => {
         </div>
       </section>
 
+      {/* Video Edukasi tentang Daun Kelor */}
+      <VideoSection />
+
       {/* Featured Products */}
       <section className="bg-white dark:bg-gray-800/40 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -133,6 +138,9 @@ const Home = () => {
           )}
         </div>
       </section>
+
+      {/* Galeri Foto / Carousel */}
+      <Gallery />
 
       {/* SDG Banner */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">

@@ -36,7 +36,7 @@ const Footer = () => {
             <h4 className="font-display font-semibold mb-3">Kontak Kami</h4>
             <ul className="space-y-2 text-sm text-white/80">
               <li className="flex items-center gap-2"><Phone size={14} /> 081615980113</li>
-              <li className="flex items-center gap-2"><Mail size={14} /> hello@moreleaf.com</li>
+              <li className="flex items-center gap-2"><Mail size={14} /> moreleaf.bakery@gmail.com</li>
               <li className="flex items-start gap-2"><MapPin size={14} className="mt-0.5 shrink-0" /> Sawojajar, Kedungkandang, Malang</li>
             </ul>
           </div>

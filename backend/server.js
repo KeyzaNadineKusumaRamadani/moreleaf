@@ -26,6 +26,12 @@ const exportRoutes = require('./routes/exportRoutes');
 const app = express();
 const server = http.createServer(app);
 
+// PENTING: Railway/Vercel/platform hosting lain menggunakan reverse proxy.
+// Baris ini wajib ada supaya Express tahu untuk mempercayai header
+// X-Forwarded-For dari proxy tersebut (dibutuhkan oleh express-rate-limit
+// dan untuk mendapatkan IP address asli pengguna).
+app.set('trust proxy', 1);
+
 const io = new Server(server, {
   cors: {
     origin: process.env.FRONTEND_URL || 'http://localhost:5173',

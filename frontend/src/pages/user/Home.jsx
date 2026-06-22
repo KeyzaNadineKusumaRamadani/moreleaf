@@ -7,6 +7,7 @@ import { ProductGridSkeleton } from '../../components/common/Skeletons';
 import { Seo } from '../../components/common/Misc';
 import VideoSection from '../../components/common/VideoSection';
 import Gallery from '../../components/common/Gallery';
+import { useTheme } from '../../context/ThemeContext';
 
 const features = [
   { icon: Leaf, title: 'Kaya Zat Besi', desc: 'Daun kelor mengandung zat besi tinggi untuk mendukung kesehatan darah.' },
@@ -19,6 +20,7 @@ const Home = () => {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [logoError, setLogoError] = useState(false);
+  const { darkMode } = useTheme();
 
   useEffect(() => {
     const fetchFeatured = async () => {
@@ -41,9 +43,13 @@ const Home = () => {
         description="Moreleaf menghadirkan camilan sehat berbahan dasar daun kelor organik yang kaya nutrisi dan cocok untuk semua kalangan."
       />
 
-      {/* Hero */}
-      <section className="relative overflow-hidden bg-gradient-hero dark:!bg-gray-900">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 grid lg:grid-cols-2 gap-12 items-center">
+      {/* Hero - inline style dipakai khusus untuk background supaya pasti menang dari class gradient */}
+      <section
+        className="relative overflow-hidden"
+        style={darkMode ? { backgroundColor: '#111827', backgroundImage: 'none' } : {}}
+      >
+        {!darkMode && <div className="absolute inset-0 bg-gradient-hero" />}
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 grid lg:grid-cols-2 gap-12 items-center">
           <div className="animate-slide-up">
             <span className="inline-block px-4 py-1.5 bg-white/70 dark:bg-gray-800 backdrop-blur-sm text-primary dark:text-accent rounded-full text-xs font-semibold mb-5 shadow-sm">
               🌿 100% Daun Kelor Organik

@@ -54,7 +54,7 @@ const Footer = () => {
                 <MessageCircle size={18} />
               </a>
               <a
-                href="https://www.instagram.com/more.leaf?igsh=MWxtZ3FoeWR1Ynlhaw=="
+                href="https://www.instagram.com/more.leaf?igsh=MXBuYnhzM3lxN2NmbQ=="
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Instagram Moreleaf"

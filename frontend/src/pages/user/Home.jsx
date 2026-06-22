@@ -42,16 +42,16 @@ const Home = () => {
       />
 
       {/* Hero */}
-      <section className="relative overflow-hidden bg-gradient-hero">
+      <section className="relative overflow-hidden bg-gradient-hero dark:bg-none dark:bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 grid lg:grid-cols-2 gap-12 items-center">
           <div className="animate-slide-up">
-            <span className="inline-block px-4 py-1.5 bg-white/70 backdrop-blur-sm text-primary dark:text-accent rounded-full text-xs font-semibold mb-5 shadow-sm">
+            <span className="inline-block px-4 py-1.5 bg-white/70 dark:bg-gray-800 backdrop-blur-sm text-primary dark:text-accent rounded-full text-xs font-semibold mb-5 shadow-sm">
               🌿 100% Daun Kelor Organik
             </span>
             <h1 className="font-display font-bold text-4xl sm:text-5xl lg:text-6xl text-primary dark:text-accent leading-tight mb-4">
               MORELEAF
             </h1>
-            <p className="text-lg sm:text-xl text-secondary font-medium mb-4">
+            <p className="text-lg sm:text-xl text-secondary dark:text-accent font-medium mb-4">
               Healthy Snack From Moringa Leaves
             </p>
             <p className="text-gray-600 dark:text-gray-300 mb-8 max-w-md leading-relaxed">
@@ -66,7 +66,7 @@ const Home = () => {
               </Link>
               <Link
                 to="/about"
-                className="px-7 py-3.5 border-2 border-primary text-primary dark:text-accent dark:border-accent rounded-full font-semibold hover:bg-white/50 transition"
+                className="px-7 py-3.5 border-2 border-primary dark:border-accent text-primary dark:text-accent rounded-full font-semibold hover:bg-white/50 dark:hover:bg-gray-800 transition"
               >
                 Pelajari Lebih Lanjut
               </Link>
@@ -79,7 +79,7 @@ const Home = () => {
                 <img
                   src="/logo.jpg"
                   alt="Moreleaf"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover dark:invert"
                   onError={() => setLogoError(true)}
                 />
               ) : (
@@ -96,16 +96,16 @@ const Home = () => {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="text-center mb-12">
           <h2 className="font-display font-bold text-3xl text-primary dark:text-accent mb-2">Mengapa Moreleaf?</h2>
-          <p className="text-gray-500">Camilan sehat dengan manfaat nyata untuk tubuh Anda</p>
+          <p className="text-gray-500 dark:text-gray-400">Camilan sehat dengan manfaat nyata untuk tubuh Anda</p>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {features.map((f, i) => (
             <div key={i} className="bg-white dark:bg-gray-800 rounded-2xl p-6 text-center shadow-sm hover:shadow-md transition border border-gray-50 dark:border-gray-700">
-              <div className="w-14 h-14 rounded-full bg-gradient-soft text-primary dark:text-accent flex items-center justify-center mx-auto mb-4">
+              <div className="w-14 h-14 rounded-full bg-gradient-soft dark:bg-gray-700 text-primary dark:text-accent flex items-center justify-center mx-auto mb-4">
                 <f.icon size={26} />
               </div>
-              <h3 className="font-display font-semibold mb-2">{f.title}</h3>
-              <p className="text-sm text-gray-500 leading-relaxed">{f.desc}</p>
+              <h3 className="font-display font-semibold mb-2 text-gray-900 dark:text-gray-100">{f.title}</h3>
+              <p className="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">{f.desc}</p>
             </div>
           ))}
         </div>
@@ -120,7 +120,7 @@ const Home = () => {
           <div className="flex items-end justify-between mb-8">
             <div>
               <h2 className="font-display font-bold text-3xl text-primary dark:text-accent mb-1">Produk Terlaris</h2>
-              <p className="text-gray-500">Camilan favorit pelanggan kami</p>
+              <p className="text-gray-500 dark:text-gray-400">Camilan favorit pelanggan kami</p>
             </div>
             <Link to="/products" className="text-sm font-semibold text-primary dark:text-accent flex items-center gap-1 hover:gap-2 transition-all shrink-0">
               Lihat Semua <ArrowRight size={16} />

@@ -42,10 +42,10 @@ const Home = () => {
       />
 
       {/* Hero */}
-      <section className="relative overflow-hidden bg-gradient-hero dark:bg-gray-900">
+      <section className="relative overflow-hidden bg-gradient-hero dark:!bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 grid lg:grid-cols-2 gap-12 items-center">
           <div className="animate-slide-up">
-            <span className="inline-block px-4 py-1.5 bg-white/70 dark:bg-gray-800/80 backdrop-blur-sm text-primary dark:text-accent rounded-full text-xs font-semibold mb-5 shadow-sm">
+            <span className="inline-block px-4 py-1.5 bg-white/70 dark:bg-gray-800 backdrop-blur-sm text-primary dark:text-accent rounded-full text-xs font-semibold mb-5 shadow-sm">
               🌿 100% Daun Kelor Organik
             </span>
             <h1 className="font-display font-bold text-4xl sm:text-5xl lg:text-6xl text-primary dark:text-white leading-tight mb-4">
